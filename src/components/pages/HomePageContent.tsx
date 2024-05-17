@@ -11,8 +11,8 @@ const HomePageContent = (props: Props) => {
     setPostId(id);
   }, [id]);
   return (
-    <div>
-      <div className="tw-w-full tw-flex tw-flex-col tw-mt-[50px]">
+    <div className="tw-flex tw-justify-center">
+      <div className="tw-w-full tw-flex tw-flex-col tw-mt-[50px] tw-max-w-[600px]">
         <div className="tw-flex tw-flex-col tw-w-full">
           <div className="tw-flex tw-flex-col tw-items-center">
             <span className="tw-text-[30px]">
@@ -29,12 +29,26 @@ const HomePageContent = (props: Props) => {
                 }
               })}
             </span>
+            <span className="tw-text-[12px] content-text">
+              {data.map((item) => {
+                if (item.id === postId) {
+                  return item.content;
+                }
+              })}
+            </span>
           </div>
-          <img
-            className="tw-object-cover tw-rounded-[16px] tw-mt-5"
-            src="https://c4.wallpaperflare.com/wallpaper/223/269/99/harley-davidson-bikes-hd-4k-wallpaper-preview.jpg"
-            alt=""
-          />
+          {data.map((item) => {
+            if (item.id === postId) {
+              return (
+                <img
+                  key={item.id}
+                  className="tw-object-cover tw-rounded-[16px] tw-mt-5"
+                  src={item.image}
+                  alt=""
+                />
+              );
+            }
+          })}
         </div>
       </div>
     </div>

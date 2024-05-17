@@ -23,14 +23,14 @@ const Layout = (props: Props) => {
   return (
     <div
       className={
-        "tw-w-screen tw-h-screen dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light"
+        "tw-w-screen tw-h-screen dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light tw-select-none"
       }
     >
       <div
         className={
           "tw-w-full tw-h-full " +
           (isOpenMenu
-            ? "tw-block tw-z-40  tw-top-0 tw-absolute dark:tw-bg-black tw-bg-white"
+            ? "tw-block tw-z-40  tw-top-0 tw-absolute dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')]"
             : "tw-hidden")
         }
       >
@@ -46,9 +46,9 @@ const Layout = (props: Props) => {
       <div className="tw-h-full tw-overflow-scroll tw-p-10">
         <Outlet />
       </div>
-      <div className="tw-absolute tw-bottom-0 tw-left-0 tw-right-0 tw-w-full tw-p-10">
+      {/* <div className="tw-w-full tw-p-10 tw-bg-opacity-80 tw-bg-black">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 };
