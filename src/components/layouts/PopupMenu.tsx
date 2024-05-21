@@ -1,32 +1,26 @@
-import { useEffect, useState } from "react";
 import data from "../../../db.json";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 type Props = {
   handleCloseMenu: () => void;
   isOpenMenu: boolean;
 };
 
 const PopupMenu = ({ handleCloseMenu, isOpenMenu }: Props) => {
-  const { id } = useParams();
   const navigate = useNavigate();
   function handleClick(e: string) {
-    navigate(`/${e}`);
+    navigate(`/blog/${e}`);
   }
   return (
     <div
       className={"tw-p-10 tw-relative tw-select-none tw-flex tw-justify-end"}
     >
+      <p className="tw-hidden">{isOpenMenu}</p>
       <svg
         onClick={handleCloseMenu}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className={
-          "tw-w-6 tw-h-6 " +
-          (id
-            ? "tw-block tw-absolute tw-left-10 tw-cursor-pointer"
-            : "tw-hidden")
-        }
+        className="tw-w-6 tw-h-6 tw-block tw-absolute tw-left-10 tw-cursor-pointer"
       >
         <path
           fillRule="evenodd"
@@ -35,7 +29,7 @@ const PopupMenu = ({ handleCloseMenu, isOpenMenu }: Props) => {
         />
       </svg>
       <div className="tw-flex tw-flex-col tw-items-end">
-        {data.map((item) => {
+        {data["blogs"].map((item) => {
           return (
             <>
               <p

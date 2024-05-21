@@ -1,12 +1,16 @@
 import { toggle, setValue } from "@/features/darkmode/darkMode";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
-  handleOpenMenu: () => void;
+  handleOpenMenu?: () => void;
+  title: string;
+  isHaveMenu?: boolean | null;
 };
 
-const Header = ({ handleOpenMenu }: Props) => {
+const Header = ({ handleOpenMenu, title, isHaveMenu = true }: Props) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const mode = window.matchMedia("(prefers-color-scheme: dark)").matches
     ? true
@@ -18,20 +22,30 @@ const Header = ({ handleOpenMenu }: Props) => {
     <div className="">
       <header className="tw-flex tw-justify-between tw-items-center tw-relative">
         <div className="tw-flex tw-items-center tw-gap-x-3">
-          <svg
-            onClick={handleOpenMenu}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="tw-w-5 tw-h-5 tw-cursor-pointer"
+          {isHaveMenu ? (
+            <svg
+              onClick={handleOpenMenu}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="tw-w-5 tw-h-5 tw-cursor-pointer"
+            >
+              <path
+                fillRule="evenodd"
+                d="M2 6.75A.75.75 0 0 1 2.75 6h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 6.75Zm0 6.5a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          ) : (
+            <></>
+          )}
+
+          <div
+            className="dark:tw-text-dark tw-text-light tw-cursor-pointer"
+            onClick={() => navigate("/")}
           >
-            <path
-              fillRule="evenodd"
-              d="M2 6.75A.75.75 0 0 1 2.75 6h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 6.75Zm0 6.5a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <div className="dark:tw-text-dark tw-text-light">eggie's blog</div>
+            {title}
+          </div>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
