@@ -1,0 +1,20 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "ích kỷ",
+      "content": "<div class='tw-w-full'><p class='tw-mb-4'>Chào cậu,</p><p class='tw-mb-4'>Mình là Eggie, tên cúng cơm là Trần Trung Nghĩa. Có lẽ hai chúng ta đã không còn quá xa lạ gì với nhau, hoặc cũng có lẽ, cậu chỉ đơn giản là một tâm hồn vãng lai đi lạc vào một góc nhỏ trong thế giới của mình. Dù là vì lý do gì, cậu đang ở đây, và mình biết ơn về điều đó.</p><p class='tw-mb-4'>Nói qua một chút, tại sao lại là “ích kỷ”? </p><p class='tw-mb-4'> Thực ra nếu ai đó đã từng tiếp xúc với mình (một cách thoáng qua) thì có thể, họ sẽ nhìn nhận mình là một người khá cởi mở và xởi lởi. Mình nói nhiều, đôi khi là oversharing, quan điểm của mình về mọi thứ trong xã hội đều rất đa chiều và luôn nghĩ đến mặt tích cực của vấn đề. Thế nhưng ẩn sâu trong đó, mình, một kẻ vị kỷ và luôn đặt bản thân lên trên tất cả.</p> <p class='tw-mb-4'>Nếu cậu đang đọc đến đây, có lẽ cậu sẽ nghĩ rằng:”Ủa, thằng cha này thật sự sẽ bóc phốt và nói xấu chính bản thân mình hay sao?”. Thực ra cũng không hẳn là như thế, mình tin vào tính bản ác, và mình cũng tin rằng chẳng có ai, hay bất cứ thứ gì trên thế giới này có thể giữ cho mình một tâm hồn luôn hướng về ánh dương lương thiện. Bản thân mình, một kẻ tầm thường giữa bao kẻ tầm thường khác, mọi suy nghĩ tư lợi âu cũng chỉ là bản năng của một con người.</p><p class='tw-mb-4'>Nhiều tính xấu thế, tại sao lại chọn “ích kỷ”? </p><p class='tw-mb-4'> Khá đơn giản thôi, vì mình cho rằng ai trong chúng ta, dù ít dù nhiều, ích kỷ cũng đang sống, tồn tại, và cũng có thể là phát triển bên trong tâm trí của mỗi người. Nói điều này về bản thân mình, dù không chủ đích, nhưng có thể vẫn sẽ nhận lại được sự đồng cảm của một số người (dù sao thì cũng đỡ bị ném đá hơn một chút hehe).</p></div>",
+      "background": "https://wallpaper.forfun.com/fetch/44/44b208e04a532e7077071d32baebf666.jpeg",
+      "theme": "dark",
+      "author": "eggie"
+    }
+  ],
+  "movies": [
+    {
+      "id": "5",
+      "title": "Léon: The Professional",
+      "content": "123",
+      "image": "https://upload.wikimedia.org/wikipedia/en/0/03/Leon-poster.jpg"
+    }
+  ]
+}

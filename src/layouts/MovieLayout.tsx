@@ -1,5 +1,5 @@
 import Footer from "@/components/layouts/Footer";
-import Header from "@/components/layouts/Header";
+import Header from "@/components/layouts/blog/Header";
 import PopupMenu from "@/components/layouts/PopupMenu";
 import { useEffect, useState } from "react";
 import { Outlet, useParams } from "react-router-dom";
@@ -7,9 +7,6 @@ import { Outlet, useParams } from "react-router-dom";
 const MovieLayout = () => {
   const { id } = useParams();
   const [isOpenMenu, setIsOpenMenu] = useState(true);
-  const handleOpenPopupMenu = () => {
-    setIsOpenMenu(true);
-  };
   const handleClosePopupMenu = () => {
     setIsOpenMenu(false);
   };
@@ -44,7 +41,7 @@ const MovieLayout = () => {
         />
       </div>
       <div className="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-z-20">
-        <Header handleOpenMenu={handleOpenPopupMenu} title="eggie's movies" />
+        <Header />
       </div>
       <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-top-0 tw-bg-gradient-to-t"></div>
       <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-bottom-0"></div>

@@ -1,22 +1,22 @@
 import Footer from "@/components/layouts/Footer";
-import Header from "@/components/layouts/Header";
+import Header from "@/components/layouts/blog/Header";
 // import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-//   const { id } = useParams();
-//   const [isOpenMenu, setIsOpenMenu] = useState(true);
-//   const handleOpenPopupMenu = () => {
-//     setIsOpenMenu(true);
-//   };
-//   const handleClosePopupMenu = () => {
-//     setIsOpenMenu(false);
-//   };
-//   useEffect(() => {
-//     if (id) {
-//       setIsOpenMenu(false);
-//     }
-//   }, [id]);
+  //   const { id } = useParams();
+  //   const [isOpenMenu, setIsOpenMenu] = useState(true);
+  //   const handleOpenPopupMenu = () => {
+  //     setIsOpenMenu(true);
+  //   };
+  //   const handleClosePopupMenu = () => {
+  //     setIsOpenMenu(false);
+  //   };
+  //   useEffect(() => {
+  //     if (id) {
+  //       setIsOpenMenu(false);
+  //     }
+  //   }, [id]);
   return (
     <div
       className={
@@ -40,7 +40,7 @@ const Layout = () => {
         />
       </div> */}
       <div className="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-z-20">
-        <Header title="eggie's" isHaveMenu={false} />
+        <Header />
       </div>
       <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-top-0 tw-bg-gradient-to-t"></div>
       <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-bottom-0"></div>

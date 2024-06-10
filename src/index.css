@@ -4,8 +4,8 @@
 
 body {
   font-family: DFVNTAN-NIMBUS;
-   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   ::-webkit-scrollbar {
     display: none;
   }
@@ -13,6 +13,10 @@ body {
 
 .content-text {
   font-family: MONTSERRAT;
+}
+
+.title-text {
+  font-family: MONTSERRAT-SEMIBOLD;
 }
 
 @font-face {
@@ -23,5 +27,37 @@ body {
 
 @font-face {
   font-family: "MONTSERRAT";
-  src: local("MONTSERRAT"), url("../fonts/MONTSERRAT/Montserrat-Light.otf") format("truetype");
+  src: local("MONTSERRAT"),
+    url("../fonts/MONTSERRAT/Montserrat-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "MONTSERRAT-SEMIBOLD";
+  src: local("MONTSERRAT"),
+    url("../fonts/MONTSERRAT/Montserrat-SemiBold.otf") format("truetype");
+}
+
+.icon-button {
+  width: 2rem; /* tw-w-8 */
+  height: 2rem; /* tw-h-8 */
+  border-radius: 9999px; /* tw-rounded-full */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* dark:tw-bg-white and tw-bg-black tw-bg-opacity-50 */
+  display: flex; /* tw-flex */
+  justify-content: center; /* tw-justify-center */
+  align-items: center; /* tw-items-center */
+  transition-duration: 300ms; /* tw-duration-300 */
+  cursor: pointer; /* tw-cursor-pointer */
+}
+
+.icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* hover:tw-bg-opacity-70 */
+}
+
+.icon-button:active {
+  background-color: rgba(0, 0, 0, 1); /* active:tw-bg-opacity-100 */
 }

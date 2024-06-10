@@ -1,58 +1,39 @@
-import Footer from "@/components/layouts/Footer";
-import Header from "@/components/layouts/Header";
-import PopupMenu from "@/components/layouts/PopupMenu";
-import { useEffect, useState } from "react";
+import Footer from "@/components/layouts/blog/Footer";
+import Header from "@/components/layouts/blog/Header";
+// import { useEffect, useState } from "react";
 import { Outlet, useParams } from "react-router-dom";
+// import data from "../../db.json";
 
 const BlogLayout = () => {
-  const { id } = useParams();
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const handleOpenPopupMenu = () => {
-    setIsOpenMenu(true);
-  };
-  const handleClosePopupMenu = () => {
-    setIsOpenMenu(false);
-  };
-  useEffect(() => {
-    if (id) {
-      setIsOpenMenu(false);
-    }
-  }, [id]);
+  const params = useParams();
   return (
-    <div
-      className={
-        "tw-w-screen tw-h-screen dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light tw-select-none"
-      }
-      style={{
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
+      <div className="tw-hidden sm:tw-flex tw-items-center tw-justify-center tw-h-screen title-text">
+        <span>
+          App hiện tại chưa làm màn desktop nữa (tại tao lười) 
+          <br />
+        </span>
+      </div>
       <div
         className={
-          "tw-w-full tw-h-full " +
-          (isOpenMenu
-            ? "tw-block tw-z-40  tw-top-0 tw-absolute dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')]"
-            : "tw-hidden")
+          "tw-w-screen tw-h-screen dark:tw-text-dark tw-text-light tw-select-none dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] sm:tw-hidden"
         }
         style={{
           backgroundSize: "cover",
         }}
       >
-        <PopupMenu
-          handleCloseMenu={handleClosePopupMenu}
-          isOpenMenu={isOpenMenu}
-        />
-      </div>
-      <div className="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-z-20">
-        <Header handleOpenMenu={handleOpenPopupMenu} title="eggie's blog" />
-      </div>
-      <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-top-0 tw-bg-gradient-to-t"></div>
-      <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-bottom-0"></div>
-      <div className="tw-h-full tw-overflow-scroll tw-p-10">
+        <div className="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-z-20">
+          <Header />
+        </div>
         <Outlet />
-      </div>
-      <div className="tw-w-full tw-p-10 tw-bg-opacity-80 tw-absolute tw-bottom-0">
-        <Footer />
+        <div
+          className="tw-absolute tw-bottom-5 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-z-20"
+          style={{
+            display: params.id ? "" : "none",
+          }}
+        >
+          <Footer />
+        </div>
       </div>
     </div>
   );
