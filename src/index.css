@@ -9,6 +9,9 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
+  ::-ms-reveal {
+    display: none;
+}
 }
 
 .content-text {

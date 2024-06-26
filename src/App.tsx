@@ -1,4 +1,4 @@
-import { Router, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "app/store";
 

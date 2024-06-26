@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import IconComment from "@/components/icons/IconComment";
 import { useParams } from "react-router-dom";
 import IconSend from "@/components/icons/IconSend";
+import IconClose from "@/components/icons/IconClose";
 
 const Footer = () => {
   const dispatch = useDispatch();
@@ -43,25 +44,33 @@ const Footer = () => {
   return (
     <div className="">
       <div
-        className="tw-relative tw-flex tw-flex-col tw-items-end"
+        className="tw-relative tw-flex tw-flex-col tw-items-end tw-mb-3"
         style={{
           display: isCommenting ? "flex" : "none",
         }}
       >
-        <div className="icon-button dark:tw-bg-white tw-absolute tw-bottom-6 tw-right-3">
+        <div className="icon-button dark:tw-bg-white tw-absolute tw-bottom-8 tw-right-8">
           <IconSend color={strokeColor} />
         </div>
-        <div className="tw-w-full">
+        <div className="icon-button dark:tw-bg-white tw-absolute tw-top-4 tw-right-4">
+          <IconClose color={strokeColor} />
+        </div>
+        <div className="tw-w-full dark:tw-bg-[#1e1e1e] tw-bg-[#ffffff] tw-p-5 tw-rounded-xl tw-shadow-2xl tw-h-[calc(100vh-400px)] tw-flex tw-flex-col tw-justify-between tw-overflow-y-scroll">
+          <div className="tw-h-screen"></div>
           <textarea
-            className="tw-w-full tw-outline-none tw-p-5 tw-rounded-xl dark:tw-bg-[#1e1e1e] tw-bg-[#ffffff] content-text tw-border tw-text-[12px] tw-mb-3"
+            className="tw-w-full tw-outline-none tw-p-5 tw-rounded-xl dark:tw-bg-[#1e1e1e] tw-bg-[#ffffff] content-text tw-border tw-text-[12px] tw-h-[160px]"
             rows={5}
             maxLength={150}
             placeholder="Để lại suy nghĩ cho tao biết nào!"
           ></textarea>
         </div>
       </div>
-
-      <footer className="tw-flex tw-justify-between tw-items-center tw-relative">
+      <footer
+        className="tw-flex tw-justify-between tw-items-center tw-relative"
+        style={{
+          display: !isCommenting ? "flex" : "none",
+        }}
+      >
         <div></div>
         <div
           onClick={() => setIsCommenting(!isCommenting)}

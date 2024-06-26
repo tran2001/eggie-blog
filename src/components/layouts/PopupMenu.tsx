@@ -34,8 +34,8 @@ const PopupMenu = ({ handleCloseMenu, isOpenMenu }: Props) => {
             <>
               <p
                 className="hover:tw-text-lightHover dark:hover:tw-text-darkHover tw-cursor-pointer"
-                onClick={() => handleClick(item.id)}
-                key={item.id}
+                onClick={() => handleClick(item._id)}
+                key={item._id}
               >
                 {item.title}
               </p>

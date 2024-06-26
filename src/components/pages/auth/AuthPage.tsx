@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const AuthPage = (props: Props) => {
+const AuthPage = () => {
   return (
     <div>AuthPage</div>
   )

@@ -1,4 +1,3 @@
-import Footer from "@/components/layouts/Footer";
 import Header from "@/components/layouts/blog/Header";
 // import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
@@ -46,9 +45,6 @@ const Layout = () => {
       <div className="tw-h-[60px] tw-blur-xl tw-absolute tw-z-10 dark:tw-bg-light tw-bg-dark tw-w-full tw-left-0 tw-bottom-0"></div>
       <div className="tw-h-full tw-overflow-scroll tw-p-10">
         <Outlet />
-      </div>
-      <div className="tw-w-full tw-p-10 tw-bg-opacity-80 tw-absolute tw-bottom-0">
-        <Footer />
       </div>
     </div>
   );
