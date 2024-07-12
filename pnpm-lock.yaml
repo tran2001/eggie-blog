@@ -32,6 +32,9 @@ dependencies:
   dotenv:
     specifier: ^16.4.5
     version: registry.npmmirror.com/dotenv@16.4.5
+  jwt-decode:
+    specifier: ^4.0.0
+    version: registry.npmmirror.com/jwt-decode@4.0.0
   lucide-react:
     specifier: ^0.378.0
     version: registry.npmmirror.com/lucide-react@0.378.0(react@18.2.0)
@@ -94,6 +97,9 @@ devDependencies:
   postcss:
     specifier: ^8.4.38
     version: registry.npmmirror.com/postcss@8.4.38
+  react-error-overlay:
+    specifier: ~6.0.9
+    version: registry.npmmirror.com/react-error-overlay@6.0.9
   tailwindcss:
     specifier: ^3.4.3
     version: registry.npmmirror.com/tailwindcss@3.4.3
@@ -2100,6 +2106,13 @@ packages:
     version: 1.0.1
     dev: true
 
+  registry.npmmirror.com/jwt-decode@4.0.0:
+    resolution: {integrity: sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jwt-decode/-/jwt-decode-4.0.0.tgz}
+    name: jwt-decode
+    version: 4.0.0
+    engines: {node: '>=18'}
+    dev: false
+
   registry.npmmirror.com/keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/keyv/-/keyv-4.5.4.tgz}
     name: keyv
@@ -2526,6 +2539,12 @@ packages:
       react: registry.npmmirror.com/react@18.2.0
       scheduler: registry.npmmirror.com/scheduler@0.23.2
     dev: false
+
+  registry.npmmirror.com/react-error-overlay@6.0.9:
+    resolution: {integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz}
+    name: react-error-overlay
+    version: 6.0.9
+    dev: true
 
   registry.npmmirror.com/react-redux@9.1.2(@types/react@18.2.66)(react@18.2.0)(redux@5.0.1):
     resolution: {integrity: sha512-0OA4dhM1W48l3uzmv6B7TXPCGmokUU4p1M44DGN2/D9a1FjVPukVjER1PcPX97jIg6aUeLq1XJo1IpfbgULn0w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-redux/-/react-redux-9.1.2.tgz}

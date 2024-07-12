@@ -1,27 +1,30 @@
 import IconArrow from "@/components/icons/IconArrow";
 import IconSun from "@/components/icons/IconSun";
 import IconMoon from "@/components/icons/IconMoon";
-import { toggle, setValue } from "@/features/darkmode/darkMode";
+import { toggle, setValue } from "@/features/darkMode";
 import { RootState } from "app/store";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { IsOpeningOneBlogContext } from "@/layouts/BlogLayout";
 
 const Header = () => {
-  const params = useParams();
-  const navigate = useNavigate();
-  const darkState = useSelector((state: RootState) => state.darkState.value);
+  //init
   const dispatch = useDispatch();
+  //state
+  const { isOpeningOneBlog, setIsOpeningOneBlog } = useContext(IsOpeningOneBlogContext);
+  const darkState = useSelector((state: RootState) => state.darkState.value);
+
+  //DOM
   const mode = window.matchMedia("(prefers-color-scheme: dark)").matches
     ? true
     : false;
+
+  //useEffect
   useEffect(() => {
     dispatch(setValue(mode));
   }, [mode]);
 
-  const handleBack = () => {
-    navigate("/");
-  };
+  //function
 
   const handleOpenNewTab = () => {
     const url = "https://www.instagram.com/eggogia/";
@@ -31,10 +34,10 @@ const Header = () => {
   return (
     <div className="">
       <header className="tw-flex tw-justify-between tw-items-center tw-relative">
-        {Object.keys(params).length ? (
+        {isOpeningOneBlog ? (
           <div
             className="icon-button dark:tw-bg-white"
-            onClick={() => handleBack()}
+            onClick={() => setIsOpeningOneBlog(false)}
           >
             {darkState ? (
               <IconArrow color="#392a48" />

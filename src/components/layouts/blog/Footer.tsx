@@ -1,4 +1,4 @@
-import { setValue } from "@/features/darkmode/darkMode";
+import { setValue } from "@/features/darkMode";
 import { RootState } from "app/store";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -74,7 +74,7 @@ const Footer = () => {
         <div></div>
         <div
           onClick={() => setIsCommenting(!isCommenting)}
-          className="tw-w-8 tw-h-8 tw-rounded-full dark:tw-bg-white tw-bg-black tw-bg-opacity-50 tw-flex tw-justify-center tw-items-center tw-duration-300 tw-cursor-pointer hover:tw-bg-opacity-70"
+          className="tw-w-8 tw-h-8 tw-rounded-full dark:tw-bg-white tw-bg-black tw-bg-opacity-50 tw-flex tw-justify-center tw-items-center tw-duration-500 tw-cursor-pointer hover:tw-bg-opacity-70"
         >
           <IconComment strokeColor={strokeColor} />
         </div>

@@ -53,7 +53,7 @@ body {
   display: flex; /* tw-flex */
   justify-content: center; /* tw-justify-center */
   align-items: center; /* tw-items-center */
-  transition-duration: 300ms; /* tw-duration-300 */
+  transition-duration: 500ms; /* tw-duration-300 */
   cursor: pointer; /* tw-cursor-pointer */
 }
 
