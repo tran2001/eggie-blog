@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: process.env.DB_URI,
+  // baseURL: "https://eggies2-9bfcyrrb.b4a.run/api",
+  baseURL: "http://localhost:8080/api",
 });
 
 instance.interceptors.request.use(

@@ -72,7 +72,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const blogApi = createApi({
   reducerPath: "blog",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.DB_URI,
+    baseUrl: "https://eggies2-9bfcyrrb.b4a.run/api",
   }),
   tagTypes: ["Blog"],
   keepUnusedDataFor: 60,

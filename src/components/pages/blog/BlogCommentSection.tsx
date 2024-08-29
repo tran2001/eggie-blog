@@ -1,5 +1,5 @@
 import { useCommentBlogMutation } from "@/api/blog";
-import { IBlog, IComment } from "@/interfaces/common.interfaces";
+import { IComment } from "@/interfaces/common.interfaces";
 import { RootState } from "app/store";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
@@ -18,7 +18,6 @@ type Props = {
 };
 
 const BlogCommentSection = ({
-  isCommenting,
   closeCommentSection,
   blogId,
   comments,

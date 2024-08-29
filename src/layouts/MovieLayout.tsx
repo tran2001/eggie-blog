@@ -17,7 +17,7 @@ const MovieLayout = () => {
   return (
     <div
       className={
-        "tw-w-screen tw-h-screen dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light tw-select-none"
+        "tw-w-screen tw-h-[100dvh] dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light tw-select-none"
       }
       style={{
         backgroundSize: "cover",

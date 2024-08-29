@@ -10,5 +10,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  
+  build: {
+    // generate .vite/manifest.json in outDir
+    manifest: true,
+  },
 });

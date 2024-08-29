@@ -55,8 +55,8 @@ const Footer = () => {
         <div className="icon-button dark:tw-bg-white tw-absolute tw-top-4 tw-right-4">
           <IconClose color={strokeColor} />
         </div>
-        <div className="tw-w-full dark:tw-bg-[#1e1e1e] tw-bg-[#ffffff] tw-p-5 tw-rounded-xl tw-shadow-2xl tw-h-[calc(100vh-400px)] tw-flex tw-flex-col tw-justify-between tw-overflow-y-scroll">
-          <div className="tw-h-screen"></div>
+        <div className="tw-w-full dark:tw-bg-[#1e1e1e] tw-bg-[#ffffff] tw-p-5 tw-rounded-xl tw-shadow-2xl tw-h-[calc(100dvh-400px)] tw-flex tw-flex-col tw-justify-between tw-overflow-y-scroll">
+          <div className="tw-h-[100dvh]"></div>
           <textarea
             className="tw-w-full tw-outline-none tw-p-5 tw-rounded-xl dark:tw-bg-[#1e1e1e] tw-bg-[#ffffff] content-text tw-border tw-text-[12px] tw-h-[160px]"
             rows={5}

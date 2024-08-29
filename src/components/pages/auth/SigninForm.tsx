@@ -1,10 +1,9 @@
 import { signin } from "@/api/auth";
 import IconEye from "@/components/icons/IconEye";
 import IconEyeSlash from "@/components/icons/IconEyeSlash";
-import { RootState } from "app/store";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { login, logout } from "@/features/auth";
+import { useDispatch } from "react-redux";
+import { login } from "@/features/auth";
 
 type Props = {
   changeStatus: (status: boolean) => void;
@@ -21,10 +20,6 @@ const SigninForm = ({ changeStatus, color }: Props) => {
   const dispatch = useDispatch();
 
   //store
-
-  const { value: isLoggedIn } = useSelector(
-    (state: RootState) => state.authState
-  );
 
   //state
   const [formData, setFormData] = useState<IFormData>({

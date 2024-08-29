@@ -19,25 +19,12 @@ const Layout = () => {
   return (
     <div
       className={
-        "tw-w-screen tw-h-screen dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light tw-select-none"
+        "tw-w-screen tw-h-[100dvh] dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')] dark:tw-text-dark tw-text-light tw-select-none"
       }
       style={{
         backgroundSize: "cover",
       }}
     >
-      {/* <div
-        className={
-          "tw-w-full tw-h-full " +
-          (isOpenMenu
-            ? "tw-block tw-z-40  tw-top-0 tw-absolute dark:tw-bg-[url('../public/dark-background.png')] tw-bg-[url('../public/background.png')]"
-            : "tw-hidden")
-        }
-      >
-        <PopupMenu
-          handleCloseMenu={handleClosePopupMenu}
-          isOpenMenu={isOpenMenu}
-        />
-      </div> */}
       <div className="tw-absolute tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-z-20">
         <Header />
       </div>

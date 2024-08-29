@@ -25,12 +25,8 @@ const BlogLayout = () => {
       largest_container.onscroll = () => {
         if (largest_container.scrollTop > lastScrollTop) {
           header_container?.classList.add("tw-translate-y-[-100%]");
-          header_container?.classList.remove("dark:tw-bg-[#1e1e1e]");
-          header_container?.classList.remove("tw-bg-white");
         } else if (largest_container.scrollTop < lastScrollTop) {
           header_container?.classList.remove("tw-translate-y-[-100%]");
-          header_container?.classList.add("dark:tw-bg-[#1e1e1e]");
-          header_container?.classList.add("tw-bg-white");
         }
         lastScrollTop =
           largest_container.scrollTop <= 0 ? 0 : largest_container.scrollTop;
@@ -39,8 +35,8 @@ const BlogLayout = () => {
   }, []);
 
   return (
-    <div className="tw-overflow-scroll tw-h-screen" id="largest-container">
-      <div className="tw-hidden sm:tw-flex tw-items-center tw-justify-center tw-h-screen title-text">
+    <div className="tw-overflow-scroll tw-h-[100dvh] tw-w-[100%]" id="largest-container">
+      <div className="tw-hidden sm:tw-flex tw-items-center tw-justify-center tw-h-[100dvh] title-text tw-w-full">
         <span>
           App hiện tại chưa làm màn desktop nữa (tại tao lười)
           <br />
@@ -48,7 +44,7 @@ const BlogLayout = () => {
       </div>
       <div
         className={
-          "tw-w-screen tw-h-screen dark:tw-text-dark tw-text-light tw-select-none sm:tw-hidden"
+          "tw-w-screen tw-h-[100dvh] dark:tw-text-dark tw-text-light tw-select-none sm:tw-hidden"
         }
         style={{
           backgroundSize: "cover",
@@ -56,7 +52,7 @@ const BlogLayout = () => {
       >
         <IsOpeningOneBlogContext.Provider value={{ isOpeningOneBlog, setIsOpeningOneBlog }}>
           <div
-            className="tw-fixed tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-pb-5 tw-z-50 tw-duration-500"
+            className="tw-fixed tw-top-0 tw-left-0 tw-right-0 tw-w-full tw-px-10 tw-pt-10 tw-pb-5 tw-z-50 tw-duration-500 tw-bg-opacity-30"
             style={{
               display: isOpeningOneBlog ? "none" : "block",
             }}
